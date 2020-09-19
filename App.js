@@ -1,12 +1,15 @@
 import React from 'react';
-import { StyleSheet} from 'react-native';
 
+import { ApolloProvider } from 'react-apollo';
 
 import  Navigation  from './src/navigation';
+import apollpClient from './Config/apolloClient';
 
 const  App = ()  => {
   return (
-   <Navigation />
+    <ApolloProvider client={apollpClient}>
+      <Navigation />
+    </ApolloProvider>
   );
 }
 
