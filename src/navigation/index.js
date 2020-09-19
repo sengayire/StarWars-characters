@@ -1,4 +1,6 @@
 import React from 'react'; 
+import {TouchableOpacity, Text} from 'react-native'
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {Login} from '../screens';
@@ -12,13 +14,22 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator 
        initialRouteName="Login"
-       screenOptions={{
-         headerTintColor: 'white',
-         headerStyle: { backgroundColor: 'tomato' },
-       }}
+       headerMode='screen'
       >
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen  name="Login" component={Login}  options={{ title: ' ' }}/>
+        <Stack.Screen name="Profile" component={Profile}  options={{header: ({ scene, previous, navigation }) => {
+  const { options } = scene.descriptor;
+  const title =
+    options.headerTitle !== undefined
+      ? options.headerTitle
+      : options.title !== undefined
+      ? options.title
+      : scene.route.name;
+
+  return (
+    <View><Text>Here</Text></View>
+  );
+}}} />
         <Stack.Screen name="UserList" component={UserList} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -14,7 +14,6 @@ import { ghDevelopers, DEV_LIST_QUERY } from '../../helpers/userList';
 export const ListScreen = ({ data, navigation: { navigate } }) => {
    const {search} =  data;
   const list = ghDevelopers(search);
-  console.log('data',data);
   return !list.length ? (
     <View style={{ flex: 1, justifyContent: 'center' }}>
       <ActivityIndicator size="large" color="black" />
@@ -34,9 +33,9 @@ export const ListScreen = ({ data, navigation: { navigate } }) => {
               <View style={styles.image}>
                 <Image
                   style={{
-                    width: 50,
-                    height: 50,
-                    borderRadius: 50 / 2
+                    width: 80,
+                    height: 80,
+                    borderRadius: 80 / 2,
                   }}
                   source={{
                     uri: item.image
