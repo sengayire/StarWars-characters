@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { color } from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,7 +12,8 @@ const styles = StyleSheet.create({
       width: '100%',
       flex: 1,
       resizeMode: "cover",
-      justifyContent: "center"
+      justifyContent: "center",
+      alignItems: 'center'
   },
   centerContainer: {
       position: "absolute",
@@ -19,10 +21,15 @@ const styles = StyleSheet.create({
       zIndex: 2,
     },
     image: {
-    borderRadius: 50,
+     borderRadius: 50,
      width: 150,
      height: 150,
 },
+ imageText: {
+     fontWeight:  'bold',
+     fontSize: 40,
+     color: '#FFFF'
+ },
   bottomContainer: {
     height: '55%',
     width: '100%',

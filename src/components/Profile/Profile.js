@@ -5,21 +5,24 @@ import {Image} from 'react-native-elements';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const IMAGE = { uri: "https://www.loverskeyadventures.com/wp-content/uploads/2016/10/Landscape-photography-HDR.jpg" };
-const Profile = () => {
+const IMAGE = { uri: "https://fcw.com/-/media/GIG/EDIT_SHARED/Software/binary_Code.jpg" };
+const Profile = ({data, response, navigation:{navigate}}) => {
+    const {name, picture} = data
     return(
         <View style={styles.container}>
-           <ImageBackground  source={IMAGE} style={styles.topContainer} />
+           <ImageBackground  source={IMAGE} style={styles.topContainer}>
+               <Text style={styles.imageText}>GitHub Developers</Text>
+           </ImageBackground>
            <View style={styles.centerContainer}>
             <Image 
             style={styles.image} 
-            source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUIE7MZAcG_Dq3TVof1tHAYLUSSq1y-nGrDQ&usqp=CAU"}} />
+            source={{uri: picture}} />
            </View>
            <View style={styles.bottomContainer}>
                <View style={styles.bottomContentContainer}>
-                <Text style={styles.bottomText} >Welcome Sengayire Prince</Text>
+               <Text style={styles.bottomText} >Welcome {name}</Text>
                 <TouchableOpacity style={styles.bottomBtn}>
-                    <Text style={styles.botomBtnrtext}>View all Star wars actors</Text>
+                    <Text style={styles.botomBtnrtext}>View all GitHub users</Text>
                 </TouchableOpacity>
                </View>
            </View>
