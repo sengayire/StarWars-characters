@@ -1,6 +1,4 @@
-import apiAction from './apiAction';
-import axiosHelper from './axiosHelper';
 import userList from './userList';
-import * as urlHelper from './urlHelper';
+import shareUserProfile from './shareUserProfile';
 
-export { apiAction, axiosHelper, urlHelper, userList };
+export { userList, shareUserProfile };

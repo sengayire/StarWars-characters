@@ -31,7 +31,7 @@ const Navigation = () => {
     <View><Text>Here</Text></View>
   );
 }}} />
-        <Stack.Screen name="UserList" component={UserList} />
+        <Stack.Screen name="UserList" component={UserList}  options={{ title: 'GitHub users' }}/>
         <Stack.Screen name="UserInfo" component={UserInfo} />
       </Stack.Navigator>
     </NavigationContainer>

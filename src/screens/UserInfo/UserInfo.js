@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Image, Linking, TouchableOpacity } from 'react-native';
 import styles from './styles';
-// import shareProfile from '../helpers/shareProfile';
+import {shareUserProfile} from '../../helpers';
 const UserInfo = ({ route: {params: {item}}}) => {
   
     const {
@@ -20,9 +20,9 @@ const UserInfo = ({ route: {params: {item}}}) => {
         <Text style={styles.names}>{name}</Text>
         <View style={styles.shareProfile}>
           <Text style={styles.username}>@{username}</Text>
-          {/* <TouchableOpacity onPress={() => shareProfile(username, url)}>
+          <TouchableOpacity onPress={() => shareUserProfile(username, url)}>
             <Image
-              source={require('../../assets/shareButton.png')}
+              source={require('../../../assets/shareButton.png')}
               style={{
                 width: 25,
                 height: 25,
@@ -30,7 +30,7 @@ const UserInfo = ({ route: {params: {item}}}) => {
                 marginLeft: 10 
               }}
             />
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
         <View style={styles.follow}>
           <View>
