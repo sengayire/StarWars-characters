@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import {Login} from '../screens';
 import {Profile} from '../screens';
 import {UserList} from '../screens';
+import {UserInfo} from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,7 @@ const Navigation = () => {
   );
 }}} />
         <Stack.Screen name="UserList" component={UserList} />
+        <Stack.Screen name="UserInfo" component={UserInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

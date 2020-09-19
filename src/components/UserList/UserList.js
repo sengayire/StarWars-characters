@@ -27,7 +27,7 @@ export const ListScreen = ({ data, navigation: { navigate } }) => {
         renderItem={({ item }) => (
           <TouchableWithoutFeedback
             testID="flatList"
-            onPress={() => navigate('DevProfile', { item: item })}
+            onPress={() => navigate('UserInfo', { item: item })}
           >
             <View style={styles.list}>
               <View style={styles.image}>
