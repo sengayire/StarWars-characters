@@ -1,5 +1,13 @@
-import { BACKEND_URL} from 'react-native-dotenv';
+import { 
+STORAGE_KEY,
+ISSUER_URL,
+CLIENT_ID,
+API_URL
+} from '@env';
 
 export default {
-    BACKEND_URL,
+  STORAGE_KEY,
+  ISSUER_URL,
+  CLIENT_ID,
+  API_URL
 };
