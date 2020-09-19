@@ -6,8 +6,6 @@ import styles from './styles';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const IMAGE = { uri: "https://www.loverskeyadventures.com/wp-content/uploads/2016/10/Landscape-photography-HDR.jpg" };
-
-
 const Profile = () => {
     return(
         <View style={styles.container}>
