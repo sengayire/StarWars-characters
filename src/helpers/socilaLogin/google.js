@@ -6,7 +6,6 @@ import appAuthConfig from '../../../Config/appAuthConfig';
 const { STORAGE_KEY, API_URL,AUTHORIZATION_KEY } = config;
 
 const googleLogIn = async ({ setDate, setResponse }) => {
-  console.log('AUTHORIZATION_KEY', AUTHORIZATION_KEY);
   try {
     const response = await AppAuth.authAsync(appAuthConfig);
     const result = await fetch(API_URL, {

@@ -2,26 +2,26 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   list: {
     flex: 1,
     flexDirection: 'row',
+    alignItems: 'center',
     borderColor: 'gray',
-    borderBottomWidth: 1,
-    paddingTop: 5,
-    paddingLeft: 15
+    borderBottomWidth: 0.5,
+    paddingLeft: 15,
   },
-
   details: {
-    justifyContent: 'flex-start',
-    marginTop: 5,
-    marginLeft: 20
+    flex: 1,
+    marginLeft: 20,
+    paddingTop: 30,
   },
   image: {
-    marginTop: 10,
-    marginBottom: 10,
-    borderRadius: 4
+    marginTop: 20,
+    marginBottom: 20,
+    borderRadius: 4,
+    paddingLeft: 10,
   },
   name: {
     flex: 1,
@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
   username: {
     flex: 1,
     color: 'gray',
-    paddingTop: 5,
-    paddingBottom: 15,
+    paddingBottom: 30,
     fontSize: 15
   },
   listContainer: {}
