@@ -3,11 +3,11 @@ import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 
 import  Navigation  from './src/navigation';
-import apollpClient from './Config/apolloClient';
+import apolloClient from './Config/apolloClient';
 
 const  App = ()  => {
   return (
-    <ApolloProvider client={apollpClient}>
+    <ApolloProvider client={apolloClient}>
       <Navigation />
     </ApolloProvider>
   );

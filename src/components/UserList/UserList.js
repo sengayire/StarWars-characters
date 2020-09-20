@@ -7,13 +7,17 @@ import {
   TouchableWithoutFeedback,
   ActivityIndicator
 } from 'react-native';
-import styles from './styles';
 import { graphql } from 'react-apollo';
+
 import { ghDevelopers, DEV_LIST_QUERY } from '../../helpers/userList';
 
-export const ListScreen = ({ data, navigation: { navigate } }) => {
-   const {search} =  data;
+import styles from './styles';
+
+export const UserList = ({ data, navigation: { navigate } }) => {
+
+  const {search} =  data;
   const list = ghDevelopers(search);
+
   return !list.length ? (
     <View style={{ flex: 1, justifyContent: 'center' }}>
       <ActivityIndicator size="large" color="black" />
@@ -54,4 +58,11 @@ export const ListScreen = ({ data, navigation: { navigate } }) => {
   );
 };
 
-export default graphql(DEV_LIST_QUERY)(ListScreen);
+
+export default graphql(DEV_LIST_QUERY, {options: (props) => {
+  return({
+  variables: {
+    location:`location:${props.location}  ${props.username && `user:${props.username}`}`
+  }
+})}
+})(UserList);

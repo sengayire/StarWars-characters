@@ -18,8 +18,8 @@ const ghDevelopers = search => {
   
 
    const DEV_LIST_QUERY = gql`
-  query {
-    search(query: "location:rwanda", type: USER, first: 100) {
+  query Search($location: String!) {
+    search(query: $location, type: USER, first: 100) {
       edges {
         cursor
         node {

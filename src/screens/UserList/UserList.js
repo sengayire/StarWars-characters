@@ -1,6 +1,22 @@
-import React from 'react';
-import { UserList } from '../../components';
+import React, {useState, useEffect} from 'react';
+import {View} from 'react-native';
 
-const userListScreen = ({data, navigation}) => <UserList data={data} navigation={navigation}/>
+import { UserList, SearchUser } from '../../components';
 
-export default userListScreen;
+const UserListScreen = ({data, navigation}) => {
+ const [username, setUsername] = useState('') 
+ 
+  const onChange = (text) => setUsername(text)
+ 
+    useEffect(() =>  () => onChange(), [setUsername]);
+
+    const List = () =>  <UserList data={data} location='rwanda' username={username} navigation={navigation}/>
+    return (
+           <View style={{height: '100%'}}>
+               <SearchUser  value={username} onChange={onChange} />
+               <List />
+           </View>
+    )
+}
+
+export default UserListScreen;
