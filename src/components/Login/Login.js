@@ -6,9 +6,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import loginBanner from '../../../assets/loginBanner.png';
 import gmailIcon from '../../../assets/gmail.png';
 import styles from './styles';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Login = ({onPress}) => {
     return(
+      <ScrollView style={styles.scrollContainer}>
         <View style={styles.container}>
             <Image
              source={loginBanner}
@@ -24,6 +26,7 @@ const Login = ({onPress}) => {
            <Text style={styles.btnText}>Login with G-Mail</Text>
           </TouchableOpacity>
          </View>
+      </ScrollView>
     )
 }
 

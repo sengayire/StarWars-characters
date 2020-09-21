@@ -19,7 +19,7 @@ export const UserList = ({ data, navigation: { navigate } }) => {
   const list = ghDevelopers(search);
 
   return !list.length ? (
-    <View style={{ flex: 1, justifyContent: 'center' }}>
+    <View style={{ flex: 1, paddingTop: 20 }}>
       <ActivityIndicator size="large" color="black" />
     </View>
   ) : (

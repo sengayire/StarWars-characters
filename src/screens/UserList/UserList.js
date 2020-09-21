@@ -3,14 +3,14 @@ import {View} from 'react-native';
 
 import { UserList, SearchUser } from '../../components';
 
-const UserListScreen = ({data, navigation}) => {
+const UserListScreen = ({data, navigation, route: {params: {country}}}) => {
  const [username, setUsername] = useState('') 
- 
+
   const onChange = (text) => setUsername(text)
  
     useEffect(() =>  () => onChange(), [setUsername]);
 
-    const List = () =>  <UserList data={data} location='rwanda' username={username} navigation={navigation}/>
+    const List = () =>  <UserList data={data} location={country} username={username} navigation={navigation}/>
     return (
            <View style={{height: '100%'}}>
                <SearchUser  value={username} onChange={onChange} />

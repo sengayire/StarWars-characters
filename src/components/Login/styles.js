@@ -1,11 +1,16 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  scrollContainer: {
+    backgroundColor: '#fff'
+  },
   container: {
-     height: '100%',
-     backgroundColor: '#fff',
+    height: '100%',
+    backgroundColor: '#fff',
      alignItems: 'center',
      paddingTop: 50,
+     paddingLeft: 20,
+     paddingRight: 20,
      width: '100%',
 
   },
