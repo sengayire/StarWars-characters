@@ -60,7 +60,46 @@ botomBtnrtext: {
  paddingLeft: 15,
  paddingRight: 15,
  fontSize: 16,
-}
+},
+centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 30,
+  },
+  modalView: {
+    width: '100%',
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 10,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
+  },
+  openButton: {
+    borderRadius: 100,
+    padding: 5,
+    elevation: 2,
+    width: '100%'
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    paddingBottom: 25,
+    textAlign: "center",
+    fontWeight: 'bold',
+    fontSize: 20
+  }
 });
 
 
