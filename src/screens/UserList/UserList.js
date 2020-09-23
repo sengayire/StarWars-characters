@@ -5,7 +5,6 @@ import { UserList, SearchUser } from '../../components';
 
 const UserListScreen = ({data, navigation, route: {params: {country}}}) => {
  const [username, setUsername] = useState('') 
-
   const onChange = (text) => setUsername(text)
  
     useEffect(() =>  () => onChange(), [setUsername]);

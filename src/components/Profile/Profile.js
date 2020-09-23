@@ -11,12 +11,11 @@ import styles from './styles';
 const IMAGE = { uri: "https://fcw.com/-/media/GIG/EDIT_SHARED/Software/binary_Code.jpg" };
 const Profile = ({data: {name, picture} , response, navigation}) => {
     const [modalVisible, setModalVisible] = useState(false);
-
     return(
-        <View style={styles.container}>
+        <View style={styles.container}>            
            <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} navigation={navigation}/>
            <ImageBackground  source={IMAGE} style={styles.topContainer}>
-               <Text style={styles.imageText}>GitHub Developers</Text>
+            <Text style={styles.imageText}>GitHub Developers</Text>
            </ImageBackground>
             <SafeAreaView style={{top: -320, right: 160}}>
                 <TouchableOpacity onPress={() =>
