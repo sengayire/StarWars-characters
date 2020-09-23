@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
+import {View, Text, TouchableOpacity, ActivityIndicator, SafeAreaView} from 'react-native';
 import { Image } from 'react-native-elements';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
@@ -11,6 +11,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 const Login = ({onPress}) => {
     return(
       <ScrollView style={styles.scrollContainer}>
+        <SafeAreaView>
         <View style={styles.container}>
             <Image
              source={loginBanner}
@@ -26,6 +27,7 @@ const Login = ({onPress}) => {
            <Text style={styles.btnText}>Login with G-Mail</Text>
           </TouchableOpacity>
          </View>
+        </SafeAreaView>
       </ScrollView>
     )
 }

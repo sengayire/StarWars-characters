@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   centerContainer: {
       position: "absolute",
-      top: 280,
+      top: 320,
       zIndex: 2,
     },
     image: {
