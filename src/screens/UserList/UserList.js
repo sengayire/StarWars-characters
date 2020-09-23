@@ -13,7 +13,7 @@ const UserListScreen = ({data, navigation, route: {params: {country}}}) => {
     const List = () =>  <UserList data={data} location={country} username={username} navigation={navigation}/>
     return (
            <View style={{height: '100%'}}>
-               <SearchUser  value={username} onChange={onChange} />
+               <SearchUser navigation={navigation} value={username} onChange={onChange} />
                <List />
            </View>
     )

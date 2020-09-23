@@ -15,22 +15,10 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator 
        initialRouteName="Login"
-       headerMode='screen'
+       headerMode='none'
       >
         <Stack.Screen  name="Login" component={Login}  options={{ title: ' ' }}/>
-        <Stack.Screen name="Profile" component={Profile}  options={{header: ({ scene, previous, navigation }) => {
-  const { options } = scene.descriptor;
-  const title =
-    options.headerTitle !== undefined
-      ? options.headerTitle
-      : options.title !== undefined
-      ? options.title
-      : scene.route.name;
-
-  return (
-    <View><Text>Here</Text></View>
-  );
-}}} />
+        <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="UserList" component={UserList}  options={{ title: 'GitHub users' }}/>
         <Stack.Screen name="UserInfo" component={UserInfo} />
       </Stack.Navigator>

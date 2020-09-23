@@ -3,7 +3,9 @@ import { AsyncStorage, Alert } from 'react-native';
 import config from '../../../config';
 import appAuthConfig from '../../../Config/appAuthConfig';
 
-const { STORAGE_KEY, API_URL,AUTHORIZATION_KEY } = config;
+const { STORAGE_KEY, API_URL } = config;
+const CANCEL_MESSAGE = 'Your operation has been canceled' 
+
 
 const googleLogIn = async ({ setDate, setResponse }) => {
   try {
@@ -20,7 +22,8 @@ const googleLogIn = async ({ setDate, setResponse }) => {
     setDate(data);
     setResponse(response);
   } catch ({ message }) {
-    alert(`login: ${message}`);
+
+    return (message.includes('ERR_APP_AUTH') && alert(CANCEL_MESSAGE));
   }
 };
 
