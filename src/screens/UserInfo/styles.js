@@ -2,7 +2,8 @@ const styles = {
     container: {
       flex: 1,
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      width: '100%',
     },
     title: {
       fontSize: 20,

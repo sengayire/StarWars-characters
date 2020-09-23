@@ -1,8 +1,11 @@
 import React from 'react';
-import { View, Text, Image, Linking, TouchableOpacity } from 'react-native';
-import styles from './styles';
+import { View, Text, Image, Linking, TouchableOpacity, SafeAreaView } from 'react-native';
+
+import backArrowBlack from '../../../assets/backArrowBlack.png';
 import {shareUserProfile} from '../../helpers';
-const UserInfo = ({ route: {params: {item}}}) => {
+import styles from './styles';
+
+const UserInfo = ({navigation, route: {params: {item}}}) => {
   
     const {
       image,
@@ -12,10 +15,17 @@ const UserInfo = ({ route: {params: {item}}}) => {
       username,
       repositories,
       url,
-      stars
+      stars,
     } = item;
     return (
       <View style={styles.container}>
+        <SafeAreaView style={{width: '100%'}}>
+        <View style={{ paddingLeft: 20, paddingTop: 20}}>
+         <TouchableOpacity style={{width: 30}} onPress={() => navigation.goBack()} >
+         <Image  source={backArrowBlack} style={{width:22, height:20}}/>
+        </TouchableOpacity>
+       </View>
+        </SafeAreaView>
         <Image source={{ uri: image }} style={styles.image} />
         <Text style={styles.names}>{name}</Text>
         <View style={styles.shareProfile}>

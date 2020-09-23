@@ -3,12 +3,10 @@ import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import {Image} from 'react-native-elements';
 
-import { signOutAsync } from '../../helpers/socilaLogin/google';
 import backArrowBlack from '../../../assets/backArrowBlack.png';
 import styles from './styles';
 
 const SearchUser = ({onChange, value, navigation}) => {
-    console.log('response', navigation);
     return(
        <SafeAreaView>
         <View style={styles.container}>
@@ -27,7 +25,7 @@ const SearchUser = ({onChange, value, navigation}) => {
                  borderBottomWidth: 0.5, 
                  borderRadius: 100
                 }} 
-            placeholder='Enter username...' 
+            placeholder='Search by username...' 
              containerStyle={
                 {backgroundColor: 'transparent', borderBottomWidth: 0, borderTopWidth: 0}
                 } 

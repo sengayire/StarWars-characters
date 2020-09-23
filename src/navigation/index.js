@@ -1,5 +1,5 @@
 import React from 'react'; 
-import {TouchableOpacity, Text} from 'react-native'
+import {StatusBar, View} from 'react-native'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -11,6 +11,7 @@ import {UserInfo} from '../screens';
 const Stack = createStackNavigator();
 
 const Navigation = () => {
+  const screen = 'profile';
   return (
     <NavigationContainer>
       <Stack.Navigator 
