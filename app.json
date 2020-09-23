@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "StarWars-characters",
-    "slug": "StarWars-characters",
+    "name": "GitHub users",
+    "slug": "GitHub-users",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Octocat.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Octocat.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#24292e"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,6 +21,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.github.users"
     }
   }
 }

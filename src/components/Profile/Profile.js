@@ -14,13 +14,16 @@ const Profile = ({data: {name, picture} , response, navigation}) => {
     return(
         <View style={styles.container}>            
            <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} navigation={navigation}/>
-           <ImageBackground  source={IMAGE} style={styles.topContainer}>
+            <ImageBackground  source={IMAGE} style={styles.topContainer}>
             <Text style={styles.imageText}>GitHub Developers</Text>
            </ImageBackground>
-            <SafeAreaView style={{top: -320, right: 160}}>
+            <SafeAreaView style={{top: -320, right: 0, width: '100%'}}>
                 <TouchableOpacity onPress={() =>
-                signOutAsync(response && response.accessToken, navigation)}>
+                signOutAsync(response && response.accessToken, navigation)}
+                style={{display: 'flex', flexDirection: 'row', paddingLeft: 20}}
+                >
                   <Image  source={backArrow} style={{width:22, height:20}}/>
+                  <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16, paddingLeft: 5}}>Logout</Text>
                 </TouchableOpacity>
             </SafeAreaView>
            <View style={styles.centerContainer}>
