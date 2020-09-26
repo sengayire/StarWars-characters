@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Login should match to snapshot - Secondary 1`] = `
-<View>
-  <Text>
-    Welcome to star wars
-  </Text>
-</View>
-`;
