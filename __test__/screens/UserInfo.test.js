@@ -4,22 +4,23 @@ import { shallow } from 'enzyme';
 import DevProfile from '../../src/screens/UserInfo';
 describe('DevProfile', () => {
   const createTestProps = props => ({
-    navigation: {
-      state: {
-        params: {
-          item: {
-            image: 'https://avatars2.githubusercontent.com/u/403938?v=4',
-            followers: { totalCount: 64 },
-            following: { totalCount: 0 },
-            name: 'sengayire Prince',
-            username: 'daprince',
-            repositories: '100',
-            url: 'https://github.com/salimane',
-            stars: '100'
-          }
+    route: {
+      params: {
+        item: {
+          image: 'https://avatars2.githubusercontent.com/u/403938?v=4',
+          followers: { totalCount: 64 },
+          following: { totalCount: 0 },
+          name: 'sengayire Prince',
+          username: 'daprince',
+          repositories: '100',
+          url: 'https://github.com/salimane',
+          stars: '100'
         }
-      },
-      navigate: jest.fn()
+      }
+    },
+    navigation: {
+      navigate: jest.fn(),
+      goBack: jest.fn()
     },
     ...props
   });

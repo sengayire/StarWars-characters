@@ -11,6 +11,10 @@ web-build/
 web-report/
 coverage/**/**
 .env
+# Coverage directory used by tools like istanbul
+coverage
+# nyc test coverage
+.nyc_output
 
 # macOS
 .DS_Store
