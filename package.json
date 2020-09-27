@@ -6,7 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest --coverage",
+    "cover": "nyc --reporter=lcov --reporter=text jest --coverage -u"
   },
   "dependencies": {
     "@apollo/client": "^3.2.0",
