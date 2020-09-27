@@ -38,7 +38,6 @@ describe('ProfileScreen', () => {
     const props = createTestProps({});
     it('should match to snapshot', () => {
       const component = shallow(<ProfileScreen {...props} />);
-      console.log('component ///', component.props());
     //   component
     //     .find(Button)
     //     .first()

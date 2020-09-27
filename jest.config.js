@@ -8,7 +8,7 @@ module.exports = {
   collectCoverage: true,
   clearMocks: true,
   collectCoverageFrom: [
-    'src/**/*.{js,jsx}',
+    'src/screens/**/*.{js,jsx}',
     '!**/coverage/**',
     '!**/node_modules/**',
     '!**/babel.config.js',

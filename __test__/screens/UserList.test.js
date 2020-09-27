@@ -63,8 +63,11 @@ describe('ListScreen', () => {
     it('should match to snapshot', () => {
       const props = createTestProps({});
       const ghDevelopers = jest.fn();
-      const list = ghDevelopers(props.search);
+      const List = jest.fn();
+      ghDevelopers(props.search);
       const component = shallow(<ListScreen {...props} />);
+      List()
+      console.log('component >>>', List.mo);
       expect(ghDevelopers).toHaveBeenCalled();
     });
   });
